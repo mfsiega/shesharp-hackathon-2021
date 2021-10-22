@@ -261,6 +261,31 @@ const Canvas = (props) => {
       }
       return 4;
     },
+    m: (x, y, context) => {
+      for (const coord of [
+        [0, 30],
+        [0, 25],
+        [0, 20],
+        [0, 15],
+        [0, 10],
+        [0, 5],
+        [0, 0],
+        [5, 5],
+        [10, 10],
+        [15, 10],
+        [20, 5],
+        [25, 0],
+        [25, 5],
+        [25, 10],
+        [25, 15],
+        [25, 20],
+        [25, 25],
+        [25, 30]
+      ]) {
+        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+      }
+      return 6;
+    },
     x: (x, y, context) => {
       for (const coord of [
         [0, 0],
@@ -294,7 +319,7 @@ const Canvas = (props) => {
     context.strokeStyle = "#202020"
     let xOffset = 0;
     let yOffset = 0;
-    for (const word of "jig if half bag bad cable alex".split(" ")) {
+    for (const word of "mad jig if half bag bad cable alex".split(" ")) {
       const wordWidth = getWordWidth(word);
       if (xOffset + wordWidth * LETTER_SIZE > props.width) {
         xOffset = 0;
