@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import WelcomeBackground from "./welcome-background/welcome-background";
+import SheSharpTroopl from "./shesharp-x-troopl/shesharp-x-troopl";
+import Canvas from "./Canvas";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <WelcomeBackground>
+        <SheSharpTroopl />
+        <h1>Welcome to the Hackathon 2021</h1>
+      </WelcomeBackground>
+      <Canvas height={800} width={800} />
     </div>
   );
 }
