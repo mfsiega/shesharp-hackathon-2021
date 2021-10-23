@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.canvas-border {
+  height: 410px;
+  width: 810px;
+  border: solid 2px #7c7373;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+}
