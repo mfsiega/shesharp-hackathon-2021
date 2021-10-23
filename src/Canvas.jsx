@@ -9,9 +9,32 @@ const Canvas = (props) => {
 
   const letterWidths = {
     a: 5,
-    l: 4,
+    b: 5,
+    c: 6,
+    d: 5,
     e: 4,
+    f: 5,
+    g: 5,
+    h: 5,
+    i: 3,
+    j: 4,
+    k: 5,
+    l: 4,
+    m: 6,
+    n: 6,
+    o: 5,
+    p: 5,
+    q: 7,
+    r: 5,
+    s: 4,
+    t: 5,
+    u: 5,
+    v: 5,
+    w: 5,
     x: 5,
+    y: 5,
+    z: 5,
+    '!': 1
   };
 
   const getWordWidth = (word) => {
@@ -243,6 +266,26 @@ const Canvas = (props) => {
         context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
       }
       return 4
+    },
+    k: (x, y, context) => {
+      for (const coord of [
+        [0, 0],
+        [0, 5],
+        [0, 10],
+        [0, 15],
+        [0, 20],
+        [0, 25],
+        [0, 30],
+        [15, 5],
+        [10, 10],
+        [5, 15],
+        [10, 20],
+        [15, 25],
+        [20, 30]
+      ]) {
+        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+      }
+      return 5
     },
     l: (x, y, context) => {
       for (const coord of [
@@ -530,7 +573,46 @@ const Canvas = (props) => {
       ]) {
         context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
       }
-      return 5;
+      return 5
+    },
+    y: (x, y, context) => {
+      for (const coord of [
+        [0, 0],
+        [0, 5],
+        [5, 10],
+        [10, 15],
+        [10, 20],
+        [10, 25],
+        [10, 30],
+        [20, 0],
+        [20, 5],
+        [15, 10]
+      ]) {
+        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+      }
+      return 5
+    },
+    z: (x, y, context) => {
+      for (const coord of [
+        [0, 0],
+        [5, 0],
+        [10, 0],
+        [15, 0],
+        [20, 0],
+        [20, 5],
+        [15, 10],
+        [10, 15],
+        [5, 20],
+        [0, 25],
+        [0, 30],
+        [5, 30],
+        [10, 30],
+        [15, 30],
+        [20, 30]
+      ]) {
+        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+      }
+      return 5
     },
     " ": (x, y, context) => {
       return 2;
@@ -686,9 +768,13 @@ const Canvas = (props) => {
     context.strokeStyle = "#202020"
     let xOffset = 0;
     let yOffset = 5;
-    for (const word of "hello s#e!".split(" ")) {
+    for (const word of "you got this! keep it up!".split(" ")) {
       const wordWidth = getWordWidth(word);
-      if (xOffset + wordWidth * LETTER_SIZE > props.width) {
+      console.log(xOffset)
+      console.log(wordWidth)
+      console.log(xOffset + wordWidth*LETTER_SIZE)
+      console.log(props.width)
+      if (xOffset + wordWidth * LETTER_SIZE >= props.width) {
         xOffset = 0;
         yOffset += 40;
       }
