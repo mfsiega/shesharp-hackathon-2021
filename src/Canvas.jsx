@@ -742,6 +742,48 @@ const Canvas = (props) => {
       ]) {
         context.fillRect(x + coord[X], y + coord[Y], 2, 2);
       }
+      for (const coord of [
+        [12, 0],
+        [12, 2],
+        [12, 4],
+        [12, 6],
+        [12, 8],
+        [10, 10],
+        [10, 12],
+        [10, 14],
+        [10, 16],
+        [10, 18],
+        [10, 20],
+        [10, 22],
+        [10, 24],
+        [8, 26],
+        [8, 28],
+        [8, 30],
+        [8, 32]
+      ]) {
+        context.fillRect(x + coord[X], y + coord[Y], 2, 2);
+      }
+      for (const coord of [
+        [26, 0],
+        [26, 2],
+        [26, 4],
+        [26, 6],
+        [26, 8],
+        [24, 10],
+        [24, 12],
+        [24, 14],
+        [24, 16],
+        [24, 18],
+        [24, 20],
+        [24, 22],
+        [24, 24],
+        [22, 26],
+        [22, 28],
+        [22, 30],
+        [22, 32]
+      ]) {
+        context.fillRect(x + coord[X], y + coord[Y], 2, 2);
+      }
       context.fillStyle = origFillStyle
       return 7
     },
@@ -768,7 +810,7 @@ const Canvas = (props) => {
     context.strokeStyle = "#202020"
     let xOffset = 0;
     let yOffset = 5;
-    for (const word of "you got this! keep it up!".split(" ")) {
+    for (const word of "you got this! keep it up! #".split(" ")) {
       const wordWidth = getWordWidth(word);
       console.log(xOffset)
       console.log(wordWidth)
