@@ -1,5 +1,9 @@
 import React, { useRef, useEffect } from "react";
 
+const sleep = (ms) => {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 const Canvas = (props) => {
   const LETTER_SIZE = 5;
   const X = 0;
@@ -34,7 +38,8 @@ const Canvas = (props) => {
     x: 5,
     y: 5,
     z: 5,
-    '!': 1
+    '!': 1,
+    '#': 6
   };
 
   const getWordWidth = (word) => {
@@ -67,7 +72,11 @@ const Canvas = (props) => {
         [10, 15],
         [15, 15],
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5;
     },
@@ -93,7 +102,11 @@ const Canvas = (props) => {
         [10, 0],
         [5, 0],
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5;
     },
@@ -113,7 +126,11 @@ const Canvas = (props) => {
         [20, 30],
         [25, 25],
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 6;
     },
@@ -138,7 +155,11 @@ const Canvas = (props) => {
         [10, 0],
         [5, 0]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5;
     },
@@ -160,7 +181,11 @@ const Canvas = (props) => {
         [10, 0],
         [15, 0],
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 4;
     },
@@ -181,7 +206,11 @@ const Canvas = (props) => {
         [10, 15],
         [15, 15]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -204,7 +233,11 @@ const Canvas = (props) => {
         [20, 15],
         [15, 15]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -229,7 +262,11 @@ const Canvas = (props) => {
         [15, 15],
         [20, 15]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -247,7 +284,11 @@ const Canvas = (props) => {
         [0, 30],
         [10, 30]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 3
     },
@@ -263,7 +304,11 @@ const Canvas = (props) => {
         [5, 30],
         [0, 25]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 4
     },
@@ -283,7 +328,11 @@ const Canvas = (props) => {
         [15, 25],
         [20, 30]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -300,7 +349,11 @@ const Canvas = (props) => {
         [10, 30],
         [15, 30],
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 4;
     },
@@ -325,7 +378,11 @@ const Canvas = (props) => {
         [25, 25],
         [25, 30]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 6;
     },
@@ -350,7 +407,11 @@ const Canvas = (props) => {
         [25, 5],
         [25, 0]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 6;
     },
@@ -373,7 +434,11 @@ const Canvas = (props) => {
         [10, 0],
         [5, 0]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -396,7 +461,11 @@ const Canvas = (props) => {
         [10, 20],
         [5, 20]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -423,7 +492,11 @@ const Canvas = (props) => {
         [10, 0],
         [5, 0]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 7
     },
@@ -448,7 +521,11 @@ const Canvas = (props) => {
         [15, 25],
         [20, 30]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -467,7 +544,11 @@ const Canvas = (props) => {
         [5, 30],
         [0, 30]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 4
     },
@@ -485,7 +566,11 @@ const Canvas = (props) => {
         [10, 25],
         [10, 30]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -507,7 +592,11 @@ const Canvas = (props) => {
         [20, 5],
         [20, 0]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5;
     },
@@ -528,7 +617,11 @@ const Canvas = (props) => {
         [20, 5],
         [20, 0]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -551,7 +644,11 @@ const Canvas = (props) => {
         [20, 5],
         [20, 0]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -571,7 +668,11 @@ const Canvas = (props) => {
         [0, 25],
         [0, 30],
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -588,7 +689,11 @@ const Canvas = (props) => {
         [20, 5],
         [15, 10]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -610,7 +715,11 @@ const Canvas = (props) => {
         [15, 30],
         [20, 30]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 5
     },
@@ -637,7 +746,11 @@ const Canvas = (props) => {
         [28, 20],
         [30, 20]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], 2, 2);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], 2, 2)
+        }, delay)
+        context.delay += 25
       }
       for (const coord of [
         [2, 10],
@@ -657,7 +770,11 @@ const Canvas = (props) => {
         [30, 10],
         [32, 10]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], 2, 2);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], 2, 2)
+        }, delay)
+        context.delay += 25
       }
       for (const coord of [
         [10, 0],
@@ -678,7 +795,11 @@ const Canvas = (props) => {
         [6, 30],
         [6, 32]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], 2, 2);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], 2, 2)
+        }, delay)
+        context.delay += 25
       }
       for (const coord of [
         [24, 0],
@@ -699,7 +820,11 @@ const Canvas = (props) => {
         [20, 30],
         [20, 32]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], 2, 2);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], 2, 2)
+        }, delay)
+        context.delay += 25
       }
       context.fillStyle = "#00b29a"
       for (const coord of [
@@ -720,7 +845,13 @@ const Canvas = (props) => {
         [28, 22],
         [30, 22]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], 2, 2);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillStyle = "#00b29a"
+          context.fillRect(x + coord[X], y + coord[Y], 2, 2)
+          context.fillStyle = origFillStyle
+        }, delay)
+        context.delay += 25
       }
       for (const coord of [
         [2, 12],
@@ -740,7 +871,13 @@ const Canvas = (props) => {
         [30, 12],
         [32, 12]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], 2, 2);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillStyle = "#00b29a"
+          context.fillRect(x + coord[X], y + coord[Y], 2, 2)
+          context.fillStyle = origFillStyle
+        }, delay)
+        context.delay += 25
       }
       for (const coord of [
         [12, 0],
@@ -761,7 +898,13 @@ const Canvas = (props) => {
         [8, 30],
         [8, 32]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], 2, 2);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillStyle = "#00b29a"
+          context.fillRect(x + coord[X], y + coord[Y], 2, 2)
+          context.fillStyle = origFillStyle
+        }, delay)
+        context.delay += 25
       }
       for (const coord of [
         [26, 0],
@@ -782,7 +925,13 @@ const Canvas = (props) => {
         [22, 30],
         [22, 32]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], 2, 2);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillStyle = "#00b29a"
+          context.fillRect(x + coord[X], y + coord[Y], 2, 2)
+          context.fillStyle = origFillStyle
+        }, delay)
+        context.delay += 25
       }
       context.fillStyle = origFillStyle
       return 7
@@ -796,7 +945,11 @@ const Canvas = (props) => {
         [0, 20],
         [0, 30]
       ]) {
-        context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
       }
       return 1
     }
@@ -808,6 +961,7 @@ const Canvas = (props) => {
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.fillStyle = "#000000";
     context.strokeStyle = "#202020"
+    context.delay = 0
     let xOffset = 0;
     let yOffset = 5;
     for (const word of "you got this! keep it up! #".split(" ")) {
