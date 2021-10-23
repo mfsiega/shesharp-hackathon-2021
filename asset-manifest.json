@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/shesharp-hackathon-2021/static/css/main.a4990c16.chunk.css",
-    "main.js": "/shesharp-hackathon-2021/static/js/main.08d15ad8.chunk.js",
-    "main.js.map": "/shesharp-hackathon-2021/static/js/main.08d15ad8.chunk.js.map",
+    "main.js": "/shesharp-hackathon-2021/static/js/main.106f8a0a.chunk.js",
+    "main.js.map": "/shesharp-hackathon-2021/static/js/main.106f8a0a.chunk.js.map",
     "runtime-main.js": "/shesharp-hackathon-2021/static/js/runtime-main.494721cc.js",
     "runtime-main.js.map": "/shesharp-hackathon-2021/static/js/runtime-main.494721cc.js.map",
     "static/js/2.ae371a6a.chunk.js": "/shesharp-hackathon-2021/static/js/2.ae371a6a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.494721cc.js",
     "static/js/2.ae371a6a.chunk.js",
     "static/css/main.a4990c16.chunk.css",
-    "static/js/main.08d15ad8.chunk.js"
+    "static/js/main.106f8a0a.chunk.js"
   ]
 }
