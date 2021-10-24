@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./welcome-background.styles.scss";
 
 const WelcomeBackground = ({ children }) => {
-  return <div className="welcome-background">{children}</div>;
+  return <div>{children}</div>;
 };
 
 // We declare propTypes so when something else is given React will trow an error
