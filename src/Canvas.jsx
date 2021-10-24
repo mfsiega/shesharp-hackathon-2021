@@ -14,7 +14,7 @@ const Canvas = (props) => {
     'keep on keeping on! #',
     'hang in there -- i believe in you! #',
     'failure is the first step in every journey to success #',
-    'do not stop believing. say what you wanna say. every little thing is gonna be alright. #'
+    'do not stop believing! say what you wanna say! every little thing is gonna be alright! #'
   ]
 
   const LETTER_SIZE = 5;
