@@ -7,15 +7,8 @@ import Canvas from "./Canvas";
 function App() {
   return (
     <div className="App">
-      <WelcomeBackground>
-        <SheSharpTroopl />
-        <h1>Welcome to the Hackathon 2021</h1>
-      </WelcomeBackground>
-      <div className="canvas-container">
-        <div className="canvas-border">
-          <Canvas height={400} width={800} />
-        </div>
-      </div>
+      <Canvas height={400} width={800} />
+      <SheSharpTroopl style={{textAlign: "right"}}/>
     </div>
   );
 }

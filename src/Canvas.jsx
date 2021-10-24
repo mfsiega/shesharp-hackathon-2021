@@ -1,10 +1,20 @@
 import React, { useRef, useEffect } from "react";
 
-const sleep = (ms) => {
-  return new Promise(resolve => setTimeout(resolve, ms));
+const Canvas = (props) => {
+
+  const getRandomInt = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const Canvas = (props) => {
+  const messages = [
+    'you got this! keep it up! #',
+    'have an awesome day! #',
+    'keep on keeping on! #',
+    'hang in there -- i believe in you! #'
+  ]
+
   const LETTER_SIZE = 5;
   const X = 0;
   const Y = 1;
@@ -952,6 +962,19 @@ const Canvas = (props) => {
         context.delay += 25
       }
       return 1
+    },
+    '-': (x, y, context) => {
+      for (const coord of [
+        [0, 15],
+        [5, 15]
+      ]) {
+        const delay = context.delay;
+        setTimeout(() => {
+          context.fillRect(x + coord[X], y + coord[Y], LETTER_SIZE, LETTER_SIZE);
+        }, delay)
+        context.delay += 25
+      }
+      return 2
     }
   };
 
@@ -964,7 +987,9 @@ const Canvas = (props) => {
     context.delay = 0
     let xOffset = 0;
     let yOffset = 5;
-    for (const word of "you got this! keep it up! #".split(" ")) {
+    const message = messages[getRandomInt(0, messages.length -1)]
+    console.log(message);
+    for (const word of message.split(" ")) {
       const wordWidth = getWordWidth(word);
       console.log(xOffset)
       console.log(wordWidth)
