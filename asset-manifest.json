@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/shesharp-hackathon-2021/static/css/main.a4990c16.chunk.css",
-    "main.js": "/shesharp-hackathon-2021/static/js/main.562651fb.chunk.js",
-    "main.js.map": "/shesharp-hackathon-2021/static/js/main.562651fb.chunk.js.map",
+    "main.css": "/shesharp-hackathon-2021/static/css/main.ae4002af.chunk.css",
+    "main.js": "/shesharp-hackathon-2021/static/js/main.1d0f47a8.chunk.js",
+    "main.js.map": "/shesharp-hackathon-2021/static/js/main.1d0f47a8.chunk.js.map",
     "runtime-main.js": "/shesharp-hackathon-2021/static/js/runtime-main.494721cc.js",
     "runtime-main.js.map": "/shesharp-hackathon-2021/static/js/runtime-main.494721cc.js.map",
     "static/js/2.ae371a6a.chunk.js": "/shesharp-hackathon-2021/static/js/2.ae371a6a.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.1d149d2b.chunk.js": "/shesharp-hackathon-2021/static/js/3.1d149d2b.chunk.js",
     "static/js/3.1d149d2b.chunk.js.map": "/shesharp-hackathon-2021/static/js/3.1d149d2b.chunk.js.map",
     "index.html": "/shesharp-hackathon-2021/index.html",
-    "static/css/main.a4990c16.chunk.css.map": "/shesharp-hackathon-2021/static/css/main.a4990c16.chunk.css.map",
+    "static/css/main.ae4002af.chunk.css.map": "/shesharp-hackathon-2021/static/css/main.ae4002af.chunk.css.map",
     "static/js/2.ae371a6a.chunk.js.LICENSE.txt": "/shesharp-hackathon-2021/static/js/2.ae371a6a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.494721cc.js",
     "static/js/2.ae371a6a.chunk.js",
-    "static/css/main.a4990c16.chunk.css",
-    "static/js/main.562651fb.chunk.js"
+    "static/css/main.ae4002af.chunk.css",
+    "static/js/main.1d0f47a8.chunk.js"
   ]
 }
